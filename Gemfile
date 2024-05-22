@@ -45,4 +45,6 @@ group :development do
   # gem "spring"
   gem "rspec-rails"
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
