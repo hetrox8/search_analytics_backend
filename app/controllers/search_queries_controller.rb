@@ -1,5 +1,7 @@
 # app/controllers/search_queries_controller.rb
 class SearchQueriesController < ApplicationController
+
+
   def create
     return unless params[:query].strip.match(/[\w\s]{3,}/)
 
@@ -15,7 +17,7 @@ class SearchQueriesController < ApplicationController
   end
 
   def index
-    @search_queries = SearchQuery.group(:query).order('count_id DESC').count(:id)
+    @search_queries = SearchQuery.all
     render json: @search_queries
   end
 end
